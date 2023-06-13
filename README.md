@@ -85,6 +85,7 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Ver horarios.
  - [X] Ver salarios.
  - [X] Ver fecha de contratacion/fin de contratacion.
+## MVC-MODELO VISTA CONTROLADOR
 
 ## 📝 Para inicializar el proyecto WEB
 Ejecute primero los siguientes comandos en la direccion del proyecto
