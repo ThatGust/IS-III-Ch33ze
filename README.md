@@ -54,7 +54,7 @@ La iniciativa tiene repercusiones positivas para:
 **Estudiantes:** Reducción del el absentismo, mejorar la calidad de las clases impartidas asi generando mejores bases para nuestros futuros profesionales.
 **Docentes:** La contratacion es rapida, ademas de evitar perdida de datos.
 **Dirección de las Escuelas y Facultades:** El equipo directivo evita mareos a la hora de administrar docentes, al dar notificaciones sobre puntos importantes a la hora del trabajo.
-
+## Tecnologias
 ## Diagrama de Clases
 
 <p align="center">
