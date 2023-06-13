@@ -97,8 +97,9 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Ver fecha de contratacion/fin de contratacion.
 ## MVC-MODELO VISTA CONTROLADOR
 <p align="center">
-  <img src="https://noticias.uneatlantico.es/wp-content/uploads/2017/10/inforuno.jpg](https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
+  <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
 </p>
+
 
 ## 📝 Para inicializar el proyecto WEB
 Ejecute primero los siguientes comandos en la direccion del proyecto
