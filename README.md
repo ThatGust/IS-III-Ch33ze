@@ -57,7 +57,9 @@ La iniciativa tiene repercusiones positivas para:
 
 ## Diagrama de Clases
 
-
+<p align="center">
+  <img src="media/D02.jpg" alt="Sublime's custom image"/>
+</p>
 
 ## Diagrama de Casos de Uso
 
