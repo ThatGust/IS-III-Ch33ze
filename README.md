@@ -4,6 +4,10 @@
 
  [Enlace](https://trello.com/invite/b/NZPuDOC3/ATTI1e61b3589a3578735cd3740d8cd08937926EEC0C/cpteach-dev-progress)
 
+<p align="center">
+  <img src="https://github.com/ThatGust/IS-III-Ch33ze/tree/main/media/cpteach.png?raw=true" alt="Sublime's custom image"/>
+</p>
+
 ## Integrantes 
 - Alvaro Sergio Cano Luque
 - Angie Alexandra Pino Huarsaya
