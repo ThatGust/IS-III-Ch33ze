@@ -90,7 +90,7 @@ Para las diagramamaciones de las se utilizó Figma
 Ejecute primero los siguientes comandos en la direccion del proyecto
 ```
 virtualenv env
-.\env\Scripts\activate
+.\Scripts\activate
 ```
 Instalar modulos - SQLite
 ```
