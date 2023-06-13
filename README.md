@@ -71,6 +71,16 @@ Para las diagramamaciones de las se utilizó Figma
 **Link APP:** -  [Versión App](https://www.figma.com/file/98YCTCsRYmb6R7Mibg79dR/Scooby-Attendance?node-id=0%3A1)
 **Link WEB** - [Versión Web](https://www.figma.com/file/VvYuJi1rbh2pscG7iIGO3n/Admin-Dashboard)
 
+## Capturas
+
+<p align="center">
+  <img src="media/Capture1.PNG" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/Capture2.PNG" alt="Sublime's custom image"/>
+</p>
+
+
 ## Funcionalidades
 
  - [X] Iniciar sesión.
