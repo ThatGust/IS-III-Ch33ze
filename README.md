@@ -95,7 +95,7 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Ver horarios.
  - [X] Ver salarios.
  - [X] Ver fecha de contratacion/fin de contratacion.
-## MVC-MODELO VISTA CONTROLADOR
+## MVC-Modelo Vista Controlador
 <p align="center">
   <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
 </p>
