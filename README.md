@@ -68,8 +68,8 @@ La iniciativa tiene repercusiones positivas para:
 ## Wireframes
 Para las diagramamaciones de las se utilizó Figma
 
-**Link APP:** -  [Versión App](https://www.figma.com/file/98YCTCsRYmb6R7Mibg79dR/Scooby-Attendance?node-id=0%3A1)
-**Link WEB** - [Versión Web](https://www.figma.com/file/VvYuJi1rbh2pscG7iIGO3n/Admin-Dashboard)
+**Link APP:** -  [Versión App](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&node-id=0%3A1&t=IWCB6xXtNfGSOUUi-1)
+**Link WEB** - [Versión Web](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&t=GCXpUJp5qlITTBsL-1)
 
 ## Capturas
 
