@@ -69,6 +69,9 @@ La iniciativa tiene repercusiones positivas para:
 
 ## Diagrama de Casos de Uso
 
+<p align="center">
+  <img src="media/Diagrama_Casos_de_uso.png" alt="Sublime's custom image"/>
+</p>
 
 ## Wireframes
 Para las diagramamaciones de las se utilizó Figma
@@ -79,10 +82,25 @@ Para las diagramamaciones de las se utilizó Figma
 ## Capturas
 
 <p align="center">
-  <img src="media/Capture1.PNG" alt="Sublime's custom image"/>
+  <img src="media/WF1.PNG" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/Capture2.PNG" alt="Sublime's custom image"/>
+  <img src="media/WF2.PNG" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/WF3.PNG" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/WF4.PNG" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/WF5.PNG" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/WF6.PNG" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/WF7.PNG" alt="Sublime's custom image"/>
 </p>
 
 
