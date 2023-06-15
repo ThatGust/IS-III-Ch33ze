@@ -70,7 +70,7 @@ La iniciativa tiene repercusiones positivas para:
 ## Diagrama de Casos de Uso
 
 <p align="center">
-  <img src="media/Diagrama_Casos_de_uso.png" alt="Sublime's custom image"/>
+  <img src="media/Diagrama_Casos_de_Uso.png" alt="Sublime's custom image"/>
 </p>
 
 ## Wireframes
