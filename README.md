@@ -61,8 +61,13 @@ La iniciativa tiene repercusiones positivas para:
   <img src="media/D02.jpg" alt="Sublime's custom image"/>
 </p>
 
-## Diagrama de Casos de Uso
+## Diagrama entidad relación
 
+<p align="center">
+  <img src="media/diagrama entidad relacion.png" alt="Sublime's custom image"/>
+</p>
+
+## Diagrama de Casos de Uso
 
 
 ## Wireframes
@@ -102,36 +107,36 @@ Para las diagramamaciones de las se utilizó Figma
 
 ## Requisitos funcionales
 Registro y proceso de selección:
--Los docentes deben poder registrarse en la plataforma proporcionando información personal y académica relevante.
--Se debe realizar un proceso de selección para contratar a los docentes, con etapas de evaluación y aprobación.
+- [X] Los docentes deben poder registrarse en la plataforma proporcionando información personal y académica relevante.
+- [X] Se debe realizar un proceso de selección para contratar a los docentes, con etapas de evaluación y aprobación.
 Gestión de la plana docente:
--El sistema debe permitir asignar a los docentes contratados a los respectivos cursos y asignaturas.
--Los docentes deben poder acceder a su cronograma de clases, que muestre la fecha, hora y lugar de cada sesión.
+- [X] El sistema debe permitir asignar a los docentes contratados a los respectivos cursos y asignaturas.
+- [X] Los docentes deben poder acceder a su cronograma de clases, que muestre la fecha, hora y lugar de cada sesión.
 Personalización de criterios de evaluación:
--Los docentes deben tener la capacidad de personalizar los criterios y pesos de evaluación para cada curso que imparten.
--Deben poder definir los diferentes componentes de evaluación, como exámenes, trabajos, participación, etc.
+- [X] Los docentes deben tener la capacidad de personalizar los criterios y pesos de evaluación para cada curso que imparten.
+- [X] Deben poder definir los diferentes componentes de evaluación, como exámenes, trabajos, participación, etc.
  Registro y actualización de notas:
--Los docentes deben poder ingresar y actualizar las notas de los alumnos matriculados en sus cursos.
--El sistema debe permitir el registro de notas de forma fácil y precisa, y realizar cálculos automáticos de promedios y calificaciones finales.
+- [X] Los docentes deben poder ingresar y actualizar las notas de los alumnos matriculados en sus cursos.
+- [X] El sistema debe permitir el registro de notas de forma fácil y precisa, y realizar cálculos automáticos de promedios y calificaciones finales.
  
  
 ## REquisitos no funcionales
  Seguridad:
--La plataforma debe garantizar la seguridad de los datos personales y académicos de los docentes y alumnos.
--Se deben implementar medidas de autenticación y autorización para proteger la información sensible.
--Las funciones de colaboración deben cumplir con los estándares de seguridad de la universidad para proteger la confidencialidad y privacidad de los datos compartidos.
+- [X] La plataforma debe garantizar la seguridad de los datos personales y académicos de los docentes y alumnos.
+- [X] Se deben implementar medidas de autenticación y autorización para proteger la información sensible.
+- [X] Las funciones de colaboración deben cumplir con los estándares de seguridad de la universidad para proteger la confidencialidad y privacidad de los datos compartidos.
 Usabilidad:
--La interfaz de usuario debe ser intuitiva y fácil de usar para docentes y alumnos.
--Se debe proporcionar una navegación clara y estructurada, con instrucciones claras para cada funcionalidad.
+- [X] La interfaz de usuario debe ser intuitiva y fácil de usar para docentes y alumnos.
+- [X] Se debe proporcionar una navegación clara y estructurada, con instrucciones claras para cada funcionalidad.
 Escalabilidad:
--El sistema debe ser capaz de manejar un gran número de docentes y alumnos a medida que la universidad crece.
--Debe tener capacidad para manejar un alto volumen de datos, como registros de notas y mensajes.
+- [X] El sistema debe ser capaz de manejar un gran número de docentes y alumnos a medida que la universidad crece.
+- [X] Debe tener capacidad para manejar un alto volumen de datos, como registros de notas y mensajes.
 Rendimiento:
--La plataforma debe tener un rendimiento óptimo, con tiempos de carga rápidos y respuestas ágiles a las solicitudes de los usuarios.
--Debe ser capaz de manejar múltiples usuarios simultáneamente sin afectar la velocidad y la calidad del servicio.
+- [X] La plataforma debe tener un rendimiento óptimo, con tiempos de carga rápidos y respuestas ágiles a las solicitudes de los usuarios.
+- [X] Debe ser capaz de manejar múltiples usuarios simultáneamente sin afectar la velocidad y la calidad del servicio.
 Mantenibilidad:
--El código y la infraestructura de la plataforma deben ser mantenibles y permitir futuras actualizaciones y mejoras.
--Se debe proporcionar documentación adecuada para facilitar el mantenimiento y la resolución de problemas.
+- [X] El código y la infraestructura de la plataforma deben ser mantenibles y permitir futuras actualizaciones y mejoras.
+- [X] Se debe proporcionar documentación adecuada para facilitar el mantenimiento y la resolución de problemas.
 
 ## 📝 Para inicializar el proyecto WEB
 Ejecute primero los siguientes comandos en la direccion del proyecto
