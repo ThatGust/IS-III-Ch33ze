@@ -12,7 +12,7 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')]
 
-
+# Declaraciones
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gmailapi_backend',
     'apps.home' 
 ]
 
@@ -37,7 +38,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'core.urls'
 LOGIN_REDIRECT_URL = "home"  
 LOGOUT_REDIRECT_URL = "home"  
-TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates") 
+TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")
 
 TEMPLATES = [
     {
@@ -57,10 +58,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+# BASE DE DATOS
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'cpteach_isiii',                      # Or path to database file if using sqlite3.
+        'USER': 'root',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -89,12 +96,17 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+# GMAIL API
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'alvaro.cano.luque@gmail.com'
+EMAIL_HOST_PASSWORD = 'lizslkslrgrcxcbv'
 
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
-
-
