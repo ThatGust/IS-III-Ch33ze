@@ -21,7 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gmailapi_backend',
-    'apps.home' 
+    'apps.home',
+    'apps.config.AppsConfig'
 ]
 
 MIDDLEWARE = [
