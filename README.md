@@ -64,7 +64,7 @@ La iniciativa tiene repercusiones positivas para:
 ## Diagrama entidad relación
 
 <p align="center">
-  <img src="media/diagrama entidad relacion.png" alt="Sublime's custom image"/>
+  <img src="media/entidad_relacion.png" alt="Sublime's custom image"/>
 </p>
 
 ## Diagrama de Casos de Uso
