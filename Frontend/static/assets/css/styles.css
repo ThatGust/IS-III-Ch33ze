@@ -26,7 +26,7 @@ header{
 
 .headerr{
     position: absolute;
-    top: 10px;
+    top: 15px;
     height: 79px;
     width: 100%;
     display: flex;
@@ -61,7 +61,7 @@ header{
     background-color: whitesmoke;
     color: gray;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: bold;
 }
 .butonn:hover{
