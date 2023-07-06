@@ -24,7 +24,7 @@ class TaskModel:
 
     def get_user(self, iduser):
         params = {'iduser' : iduser}      
-        rv = self.mysql_pool.execute("SELECT * from user where iduser=%(iduser)s", params)                
+        rv = self.mysql_pool.execute("SELECT * from users where iduser=%(iduser)s", params)                
         data = []
         content = {}
         for result in rv:
@@ -43,7 +43,6 @@ class TaskModel:
         
         return None
             
-
     # Funcion para obtener todos los usuarios
     def get_users(self):
         rv = self.mysql_pool.execute("SELECT * from users")  

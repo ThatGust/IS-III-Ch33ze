@@ -13,13 +13,30 @@ host = 'http://localhost:5000'
 model = TaskModel()
 
 app = Flask(__name__,template_folder='Frontend',static_folder='Frontend/static')
-# para que utilice vue compilado ( npm run build ). En la carpeta dist, esta lo compilado de vue
-# app = Flask(__name__, template_folder= './Frontend')
 
 app.register_blueprint(task_blueprint)
 
 cors = CORS(app)
+
 app.config['SECRET_KEY'] = 'keyy'
+
+#################### ERRORES ########################
+
+@app.errorhandler(403)
+def forbidden_error(error):
+    return render_template('home/page-403.html'), 403
+
+# Manejador de error para el código de respuesta 404 Not Found
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('home/page-404.html'), 404
+
+# Manejador de error para el código de respuesta 500 Internal Server Error
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template('home/page-500.html'), 500
+
+##################### FUNCIONES ######################
 
 def authenticate_user(username, password):
 
@@ -27,6 +44,8 @@ def authenticate_user(username, password):
     if user and user['password'] == password:
         return user
     return None
+
+###################### RUTAS ########################
 
 @app.route('/dashboard')
 def dashboard():
@@ -73,7 +92,22 @@ def register():
     
     return render_template('accounts/register.html')
 
+@app.route('/profile')
+def profile():
+    return render_template('/home/profile.html')
 
+@app.route('/registerteacher', methods =['GET', 'POST'])
+def register_teacher():
+    if request.method == 'POST':
+
+
+        return redirect('/')
+
+    return render_template('home/register-teacher.html')
+
+@app.route('/postulant')
+def postulant():
+    return render_template('/home/postulant.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
