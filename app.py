@@ -105,7 +105,9 @@ def register_teacher():
 
     return render_template('home/register-teacher.html')
 
-
+@app.route('/postulant')
+def postulant():
+    return render_template('/home/postulant.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
