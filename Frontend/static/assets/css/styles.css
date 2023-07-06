@@ -1,6 +1,70 @@
+:root{
+    --primarycolor : #233da5;
+}
+
 .studen p{
     color: white;
     font-size: xx-large;
     text-align: center;
     font-weight: bold;
+}
+
+html{
+    background-color: #2d2d2d;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.headerr{
+    position: absolute;
+    top: 10px;
+    height: 79px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.logo a img{
+    width: 100%;
+    max-height: 80px;
+}
+
+.buttons{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.butonn{
+    min-width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: gray;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.butonn:hover{
+    background-color: var(--primarycolor);
+    color: white;
 }

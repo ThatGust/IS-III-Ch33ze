@@ -47,6 +47,10 @@ def authenticate_user(username, password):
 
 ###################### RUTAS ########################
 
+@app.route('/')
+def index():
+    return render_template('home/indextest.html')
+
 @app.route('/dashboard')
 def dashboard():
     return render_template('home/index.html')
@@ -59,7 +63,7 @@ def teacher():
 def mail():
     return render_template('home/mails.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -95,7 +99,7 @@ def register():
 @app.route('/profile')
 def profile():
     return render_template('/home/profile.html')
-
+ 
 @app.route('/registerteacher', methods =['GET', 'POST'])
 def register_teacher():
     if request.method == 'POST':
