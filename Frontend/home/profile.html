@@ -13,10 +13,10 @@
     <div class="row">
       <div class="col-lg-7 col-md-10">
         <h1 class="display-2 text-white"> 
-          Hello {{ request.user.username }}
+          Hola USUARIO
         </h1>
-        <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-        <a href="#!" class="btn btn-neutral">Edit profile</a>
+        <p class="text-white mt-0 mb-5">Este es tu perfil, completa tus datos</p>
+        <a href="#!" class="btn btn-neutral">Edita</a>
       </div>
     </div>
   </div>
@@ -63,10 +63,10 @@
           </div>
           <div class="text-center">
             <h5 class="h3">
-              {{ request.user.username }}
+              NOMBRE
             </h5>
             <div class="h5 font-weight-300">
-              {{ request.user.email }}
+              EMAIL
             </div>
             <div class="h5 mt-4">
               <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
@@ -98,13 +98,13 @@
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-username">Username</label>
-                    <input type="text" id="input-username" class="form-control" placeholder="Username" value="{{ request.user.username }}">
+                    <input type="text" id="input-username" class="form-control" placeholder="Username" value="NOMBRE">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-email">Email address</label>
-                    <input type="email" id="input-email" class="form-control" placeholder="{{ request.user.email }}">
+                    <input type="email" id="input-email" class="form-control" placeholder="EMAIL">
                   </div>
                 </div>
               </div>
