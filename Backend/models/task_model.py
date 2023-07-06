@@ -12,7 +12,7 @@ class TaskModel:
             'username' : username,
             'password' : password,
         }
-        query = """insert into user (username, password)
+        query = """insert into users (username, password)
             values (%(username)s, %(password)s)"""
          
         cursor = self.mysql_pool.execute(query, params, commit=True)   
@@ -24,7 +24,7 @@ class TaskModel:
 
     def get_user(self, iduser):
         params = {'iduser' : iduser}      
-        rv = self.mysql_pool.execute("SELECT * from user where iduser=%(iduser)s", params)                
+        rv = self.mysql_pool.execute("SELECT * from users where iduser=%(iduser)s", params)                
         data = []
         content = {}
         for result in rv:
@@ -35,7 +35,7 @@ class TaskModel:
 
     def get_user_username(self, username):
         params = {'username' : username}      
-        rv = self.mysql_pool.execute("SELECT * from user where username=%(username)s", params)                
+        rv = self.mysql_pool.execute("SELECT * from users where username=%(username)s", params)                
         content = {}
         for result in rv:
             content = {'iduser': result[0], 'username': result[1], 'password': result[2]}
@@ -43,10 +43,9 @@ class TaskModel:
         
         return None
             
-
     # Funcion para obtener todos los usuarios
     def get_users(self):
-        rv = self.mysql_pool.execute("SELECT * from user")  
+        rv = self.mysql_pool.execute("SELECT * from users")  
         data = []
         content = {}
         for result in rv:
@@ -58,7 +57,7 @@ class TaskModel:
     # Funcion para eliminar un usuario
     def delete_user(self, iduser):
         params = {'iduser' : iduser}      
-        query = """delete from user where iduser = %(iduser)s"""    
+        query = """delete from users where iduser = %(iduser)s"""    
         self.mysql_pool.execute(query, params, commit=True)   
 
         data = {'result': 1}
