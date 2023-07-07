@@ -22,6 +22,9 @@ CREATE TABLE estudiante(
 
 CREATE TABLE profesor(
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    dni VARCHAR(20),
+    foto VARCHAR(255),
+    curriculum VARCHAR(255),
     departamento VARCHAR(35)
 );
 
