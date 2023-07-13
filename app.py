@@ -126,7 +126,8 @@ def register_teacher():
 
 @app.route('/postulant')
 def postulant():
-    return render_template('/home/postulant.html')
+    data_ = model.get_postulants()
+    return render_template('/home/postulant.html', data = data_)
 
 if __name__ == "__main__":
     app.run(debug=True)

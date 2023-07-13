@@ -36,7 +36,7 @@
                 <tr>
                   <th scope="col" class="sort" data-sort="name">Nombres</th>
                   <th scope="col" class="sort" data-sort="dni">DNI</th>
-                  <th scope="col" class="sort" data-sort="phone">Celular</th>
+                  <th scope="col" class="sort" data-sort="phone">Mail</th>
                   <th scope="col" class="sort" data-sort="postulation">Fecha de Postulacion</th>
                   <th scope="col" class="sort" data-sort="course">Curso</th>
                   <th scope="col" class="sort" data-sort="title">Titulo</th>
@@ -44,6 +44,7 @@
                 </tr>
               </thead>
               <tbody class="list">
+                {% for postulant in data  %}
                 <tr>
                   <th scope="row">
                     <div class="media align-items-center">
@@ -51,21 +52,21 @@
                         <img alt="Image placeholder" src="/static/assets/img/theme/bootstrap.jpg">
                       </a>
                       <div class="media-body">
-                        <span class="name mb-0 text-sm">Pepe Mondongo Cheese Ramirez</span>
+                        <span class="name mb-0 text-sm">{{ postulant.first_name }}</span>
                       </div>
                     </div>
                   </th>
                   <td class="dni-teacher">
-                    69696969
+                    {{ postulant.dni }}
                   </td>
                   <td class="phone-teacher">
-                    69696969
+                    {{ postulant.mail }}
                   </td>
                   <td class="postulation-teacher">
-                    12/12/12
+                    {{ postulant.datef }}
                   </td>
                   <td class="course-teacher">
-                    Ciencias
+                    {{ postulant.course }}
                   </td>
                   <td class="title-teacher">
                     <a href="#" class="btn btn-sm btn-neutral">Ver</a>
