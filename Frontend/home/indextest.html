@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="/static/assets/css/argon.css?v=1.2.0" type="text/css">
 
-    <title>CPTEACH</title>
+    <title>CPTeach</title>
 </head>
 <body>
     <header>
@@ -35,11 +35,16 @@
     <div class="content">
         <h1>Bienvenido a CPTeach</h1>
     </div>
-    <div class="content2">
-        <p>"La educación es el arma mas poderosa que puedes usar para cambiar el mundo"
-            <br>Nelson Mandela
-        </p> 
-    </div>
+    <div class="quote-wrapper">
+        <blockquote class="text" cite="http://www.inspireux.com/category/quotes/jesse-james-garrett/">
+          <p>La educación es el arma mas poderosa que puedes usar para cambiar el mundo.</p>
+          <footer>– Nelson Mandela</footer>
+        </blockquote>
+      </div>
     </header>
 </body>
+{% include "includes/footer-fullscreen.html" %}
+
 </html>
+
+{% block javascripts %}{% endblock javascripts %}
