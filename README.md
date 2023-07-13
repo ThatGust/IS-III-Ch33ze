@@ -87,7 +87,7 @@ Para las diagramamaciones de las se utilizó Figma
 ## Capturas
 
 <p align="center">
-  <img src="media/WF1.png" alt="Sublime's custom image"/>
+  <img src="media/1.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
   <img src="media/WF2.png" alt="Sublime's custom image"/>
