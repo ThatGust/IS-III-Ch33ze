@@ -104,9 +104,24 @@ def profile():
 def register_teacher():
     if request.method == 'POST':
 
+        first_name = request.form['first_name']
+        dni = request.form['dni']
+        mail = request.form['mail']
+        datef = request.form['datef']
+        course = request.form['course']
+
+        data = {
+            'first_name' : first_name,
+            'dni' : dni,
+            'mail' : mail,
+            'datef' : datef,
+            'course' : course
+        }
+
+        headers = {'Content-Type': 'application/json'}
+        response = requests.post(host + '/user/add_user', json=data, headers=headers)
 
         return redirect('/')
-
     return render_template('home/register-teacher.html')
 
 @app.route('/postulant')
