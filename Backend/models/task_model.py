@@ -63,6 +63,23 @@ class TaskModel:
         data = {'result': 1}
         return data
         
+################### Postulante ################################
+
+    def add_postulant(self, first_name, dni, mail, datef, course):
+        params = {
+            'first_name' : first_name,
+            'dni' : dni,
+            'mail' : mail,
+            'datef' : datef,
+            'course' : course
+        }
+        query = """insert into profesor (first_name, dni, mail, datef, course)
+            values (%(first_name)s, %(dni)s, %(mail)s, %(datef)s, %(course)s)"""
+         
+        cursor = self.mysql_pool.execute(query, params, commit=True)   
+        data = {'id': cursor.lastrowid, 'first_name' : first_name, 'dni' : dni,'mail' : mail,'datef' : datef,'course' : course}
+
+        return data
 
 ################### Actividad ################################
     # Funcion para obtener una actividad por su ID
