@@ -128,6 +128,7 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Ver horarios.
  - [X] Ver salarios.
  - [X] Ver fecha de contratacion/fin de contratacion.
+
 ## MVC-Modelo Vista Controlador
 <p align="center">
   <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
@@ -149,7 +150,8 @@ Para las diagramamaciones de las se utilizó Figma
  
  
 ## Requisitos no funcionales
- ### Seguridad:
+=====
+### Seguridad:
 - [X] La plataforma debe garantizar la seguridad de los datos personales y académicos de los docentes y alumnos.
 - [X] Se deben implementar medidas de autenticación y autorización para proteger la información sensible.
 - [X] Las funciones de colaboración deben cumplir con los estándares de seguridad de la universidad para proteger la confidencialidad y privacidad de los datos compartidos.
