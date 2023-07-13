@@ -77,10 +77,53 @@ class TaskModel:
             values (%(first_name)s, %(dni)s, %(mail)s, %(datef)s, %(course)s)"""
          
         cursor = self.mysql_pool.execute(query, params, commit=True)   
-        data = {'id': cursor.lastrowid, 'first_name' : first_name, 'dni' : dni,'mail' : mail,'datef' : datef,'course' : course}
+        data = {'id': cursor.lastrowid, 'first_name' : first_name, 'dni' : dni, 'mail' : mail, 'datef' : datef, 'course' : course}
 
         return data
 
+    # Funcion para obtener un usuario por su ID
+
+    def get_postulant(self, id):
+        params = {'id' : id}      
+        rv = self.mysql_pool.execute("SELECT * from profesor where id=%(id)s", params)                
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id': result[0], 'first_name': result[1], 'dni': result[2], 'mail': result[3], 'datef': result[4], 'course': result[5]}
+            data.append(content)
+            content = {}
+        return data
+
+    def get_postulant_username(self, username):
+        params = {'username' : username}      
+        rv = self.mysql_pool.execute("SELECT * from users where username=%(username)s", params)                
+        content = {}
+        for result in rv:
+            content = {'id': result[0], 'username': result[1], 'password': result[2]}
+            return content
+        
+        return None
+            
+    # Funcion para obtener todos los usuarios
+    def get_postulants(self):
+        rv = self.mysql_pool.execute("SELECT * from profesor")  
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id': result[0], 'first_name': result[1], 'dni': result[2], 'mail': result[3], 'datef': result[4], 'course': result[5]}
+            data.append(content)
+            content = {}
+        return data
+    
+    # Funcion para eliminar un usuario
+    def delete_postulant(self, id):
+        params = {'id' : id}      
+        query = """delete from profesor where id = %(id)s"""    
+        self.mysql_pool.execute(query, params, commit=True)   
+
+        data = {'result': 1}
+        return data
+    
 ################### Actividad ################################
     # Funcion para obtener una actividad por su ID
     def get_actividad(self, id_act):
