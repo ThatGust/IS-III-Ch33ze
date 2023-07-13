@@ -119,7 +119,7 @@ def register_teacher():
         }
 
         headers = {'Content-Type': 'application/json'}
-        response = requests.post(host + '/user/add_postulant', json=data, headers=headers)
+        response = requests.post(host + '/postulant/add_postulant', json=data, headers=headers)
 
         return redirect('/postulant')
     return render_template('home/register-teacher.html')

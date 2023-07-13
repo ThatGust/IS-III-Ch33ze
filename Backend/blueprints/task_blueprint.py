@@ -35,6 +35,28 @@ def user():
 def users():
     return jsonify(model.get_users())
 
+################# Postulante ################################
+
+@task_blueprint.route('/postulant/add_postulant', methods=['POST'])
+@cross_origin()
+def create_postulant():
+    content = model.add_postulant(request.json['first_name'], request.json['dni'], request.json['mail'], request.json['datef'], request.json['course'])
+    return jsonify(content)
+
+@task_blueprint.route('/postulant/delete_postulant', methods=['POST'])
+@cross_origin()
+def delete_postulant():
+    return jsonify(model.delete_user(int(request.json['id'])))
+
+@task_blueprint.route('/postulant/get_postulant', methods=['POST'])
+@cross_origin()
+def postulant():
+    return jsonify(model.get_user(int(request.json['id'])))
+
+@task_blueprint.route('/postulant/get_postulants', methods=['POST'])
+@cross_origin()
+def postulants():
+    return jsonify(model.get_postulants())
 
 ################# Administrador ################################
 
