@@ -90,24 +90,29 @@ Para las diagramamaciones de las se utilizó Figma
   <img src="media/1.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF2.png" alt="Sublime's custom image"/>
+  <img src="media/2.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF3.png" alt="Sublime's custom image"/>
+  <img src="media/3.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF4.png" alt="Sublime's custom image"/>
+  <img src="media/4.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF5.png" alt="Sublime's custom image"/>
+  <img src="media/5.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF6.png" alt="Sublime's custom image"/>
+  <img src="media/6.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF7.png" alt="Sublime's custom image"/>
+  <img src="media/7.png" alt="Sublime's custom image"/>
 </p>
-
+<p align="center">
+  <img src="media/8.png" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/9.png" alt="Sublime's custom image"/>
+</p>
 
 ## Funcionalidades
 
