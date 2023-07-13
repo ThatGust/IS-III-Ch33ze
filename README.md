@@ -87,27 +87,32 @@ Para las diagramamaciones de las se utilizó Figma
 ## Capturas
 
 <p align="center">
-  <img src="media/WF1.png" alt="Sublime's custom image"/>
+  <img src="media/1.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF2.png" alt="Sublime's custom image"/>
+  <img src="media/2.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF3.png" alt="Sublime's custom image"/>
+  <img src="media/3.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF4.png" alt="Sublime's custom image"/>
+  <img src="media/4.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF5.png" alt="Sublime's custom image"/>
+  <img src="media/5.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF6.png" alt="Sublime's custom image"/>
+  <img src="media/6.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/WF7.png" alt="Sublime's custom image"/>
+  <img src="media/7.png" alt="Sublime's custom image"/>
 </p>
-
+<p align="center">
+  <img src="media/8.png" alt="Sublime's custom image"/>
+</p>
+<p align="center">
+  <img src="media/9.png" alt="Sublime's custom image"/>
+</p>
 
 ## Funcionalidades
 
@@ -123,6 +128,7 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Ver horarios.
  - [X] Ver salarios.
  - [X] Ver fecha de contratacion/fin de contratacion.
+
 ## MVC-Modelo Vista Controlador
 <p align="center">
   <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
@@ -144,7 +150,8 @@ Para las diagramamaciones de las se utilizó Figma
  
  
 ## Requisitos no funcionales
- ### Seguridad:
+=====
+### Seguridad:
 - [X] La plataforma debe garantizar la seguridad de los datos personales y académicos de los docentes y alumnos.
 - [X] Se deben implementar medidas de autenticación y autorización para proteger la información sensible.
 - [X] Las funciones de colaboración deben cumplir con los estándares de seguridad de la universidad para proteger la confidencialidad y privacidad de los datos compartidos.
