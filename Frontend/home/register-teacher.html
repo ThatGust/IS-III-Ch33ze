@@ -1,20 +1,13 @@
-{% extends 'layouts/base.html' %}
-
-{% block title %} Registro - Docente {% endblock title %}
-
-{% block content %}
-
-<div class="header pb-6 d-flex align-items-center" 
-     style="min-height: 500px; background-image: url(/static/assets/img/theme/img-1-1000x600.jpg); background-size: cover; background-position: center top;">
+{% extends 'layouts/base.html' %} {% block title %} Registro - Docente {% endblock title %} {% block content %} <div
+  class="header pb-6 d-flex align-items-center"
+  style="min-height: 500px; background-image: url(/static/assets/img/theme/img-1-1000x600.jpg); background-size: cover; background-position: center top;">
   <!-- Mask -->
   <span class="mask bg-gradient-default opacity-8"></span>
   <!-- Header container -->
   <div class="container-fluid d-flex align-items-center">
     <div class="row">
       <div class="col-lg-7 col-md-10">
-        <h1 class="display-2 text-white"> 
-          Hola Usuario
-        </h1>
+        <h1 class="display-2 text-white"> Hola Usuario </h1>
         <p class="text-white mt-0 mb-5">Sirvase a registrar el nuevo docente</p>
       </div>
     </div>
@@ -39,22 +32,61 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="input-first-name">Nombre y Apellidos</label>
-                    <input type="text" id="input-first-name" class="form-control" placeholder="First name" name="first_name">
+                    <label class="form-control-label" for="input-first-name">Nombre</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="Nombre"
+                      name="first_name">
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-dni">DNI</label>
-                    <input type="text" id="input-dni" class="form-control" placeholder="Last name" name="dni">
+                    <input type="text" id="input-dni" class="form-control" placeholder="DNI" name="dni">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Apellido Paterno</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="Apellido Paterno"
+                      name="apellido_paterno">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
                     <label class="form-control-label" for="input-email">Email</label>
-                    <input type="email" id="input-email" class="form-control" placeholder="sussy@hotsus.com" name="mail">
+                    <input type="email" id="input-email" class="form-control" placeholder="sussy@hotsus.com"
+                      name="mail">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Apellido Materno</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="Apellido Materno"
+                      name="apellido_materno">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-first-name">Celular</label>
+                    <input type="text" id="input-first-name" class="form-control" placeholder="Celular"
+                      name="telefono_celular">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-date">Ciudad</label>
+                    <input type="text" id="input-date" class="form-control" placeholder="Arequipa, Lima..." name="city">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-course">Curso</label>
+                    <input type="text" id="input-course" class="form-control" placeholder="Curso" name="course">
                   </div>
                 </div>
               </div>
@@ -62,15 +94,7 @@
                 <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" for="input-date">Fecha de Postulacion</label>
-                    <input type="text" id="input-date" class="form-control" placeholder="42069696" name="datef">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="form-control-label" for="input-course">Curso</label>
-                    <input type="text" id="input-course" class="form-control" placeholder="42069696" name="course">
+                    <input type="text" id="input-date" class="form-control" placeholder="Dia/Mes/Año" name="datef">
                   </div>
                 </div>
               </div>
@@ -82,13 +106,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-  {% include "includes/footer.html" %}
-
-</div>
-
-{% endblock content %}
-
-<!-- Specific JS goes HERE --> 
-{% block javascripts %}{% endblock javascripts %}
+  </div> {% include "includes/footer.html" %}
+</div> {% endblock content %} <!-- Specific JS goes HERE --> {% block javascripts %}{% endblock javascripts %}
