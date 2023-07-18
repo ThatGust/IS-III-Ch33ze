@@ -1,126 +1,102 @@
-{% extends 'layouts/base.html' %}
-
-{% block title %} Postulantes {% endblock title %}
-
-{% block content %}
-
-<div class="header bg-primary pb-6">
-    <div class="container-fluid">
-      <div class="header-body">
-        <div class="row align-items-center py-4">
-          <div class="col-lg-6 col-7">
-            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-            </nav>
-          </div>
-          <div class="col-lg-6 col-5 text-right">
-            <a href="/registerteacher" class="btn btn-sm btn-neutral">Nuevo</a>
-          </div>
+{% extends 'layouts/base.html' %} {% block title %} Postulantes {% endblock title %} {% block content %} <div
+  class="header bg-primary pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+          </nav>
+        </div>
+        <div class="col-lg-6 col-5 text-right">
+          <a href="/registerteacher" class="btn btn-sm btn-neutral">Nuevo</a>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- Page content -->
-  <div class="container-fluid mt--6">
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <!-- Card header -->
-          <div class="card-header border-0">
-            <h3 class="mb-0">Tabla de Postulantes</h3>
-          </div>
-          <!-- Light table -->
-          <div class="table-responsive">
-            <table class="table align-items-center table-flush">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col" class="sort" data-sort="name">Nombres</th>
-                  <th scope="col" class="sort" data-sort="dni">DNI</th>
-                  <th scope="col" class="sort" data-sort="phone">Mail</th>
-                  <th scope="col" class="sort" data-sort="postulation">Fecha de Postulacion</th>
-                  <th scope="col" class="sort" data-sort="course">Curso</th>
-                  <th scope="col" class="sort" data-sort="title">Titulo</th>
-                  <th scope="col" class="sort" data-sort="state">Estado</th>
-                </tr>
-              </thead>
-              <tbody class="list">
-                {% for postulant in data  %}
-                <tr>
-                  <th scope="row">
-                    <div class="media align-items-center">
-                      <a href="#" class="avatar rounded-circle mr-3">
-                        <img alt="Image placeholder" src="/static/assets/img/theme/bootstrap.jpg">
-                      </a>
-                      <div class="media-body">
-                        <span class="name mb-0 text-sm">{{ postulant.first_name }}</span>
-                      </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header border-0">
+          <h3 class="mb-0">Tabla de Postulantes</h3>
+        </div>
+        <!-- Light table -->
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col" class="sort" data-sort="name">Nombres</th>
+                <th scope="col" class="sort" data-sort="dni">DNI</th>
+                <th scope="col" class="sort" data-sort="phone">Mail</th>
+                <th scope="col" class="sort" data-sort="postulation">Fecha de Postulacion</th>
+                <th scope="col" class="sort" data-sort="course">Curso</th>
+                <th scope="col" class="sort" data-sort="title">Titulo</th>
+                <th scope="col" class="sort" data-sort="state">Estado</th>
+              </tr>
+            </thead>
+            <tbody class="list"> {% for postulant in data %} <tr>
+                <th scope="row">
+                  <div class="media align-items-center">
+                    <a href="#" class="avatar rounded-circle mr-3">
+                      <img alt="Image placeholder" src="/static/assets/img/theme/bootstrap.jpg">
+                    </a>
+                    <div class="media-body">
+                      <span class="name mb-0 text-sm">{{ postulant.nombre }}</span>
                     </div>
-                  </th>
-                  <td class="dni-teacher">
-                    {{ postulant.dni }}
-                  </td>
-                  <td class="phone-teacher">
-                    {{ postulant.mail }}
-                  </td>
-                  <td class="postulation-teacher">
-                    {{ postulant.datef }}
-                  </td>
-                  <td class="course-teacher">
-                    {{ postulant.course }}
-                  </td>
-                  <td class="title-teacher">
-                    <a href="#" class="btn btn-sm btn-neutral">Ver</a>
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown">
-                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Activo</a>
-                        <a class="dropdown-item" href="#">Pendiente</a>
-                        <a class="dropdown-item" href="#">Despedir</a>
-                      </div>
+                  </div>
+                </th>
+                <td class="dni-teacher"> {{ postulant.dni }} </td>
+                <td class="phone-teacher"> {{ postulant.mail }} </td>
+                <td class="postulation-teacher"> {{ postulant.datef }} </td>
+                <td class="course-teacher"> {{ postulant.course }} </td>
+                <td class="title-teacher">
+                  <a href="#" class="btn btn-sm btn-neutral">Ver</a>
+                </td>
+                <td class="text-right">
+                  <div class="dropdown">
+                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="#">Activo</a>
+                      <a class="dropdown-item" href="#">Pendiente</a>
+                      <a class="dropdown-item" href="#">Despedir</a>
                     </div>
-                  </td>
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </div>
-          <!-- Card footer -->
-          <div class="card-footer py-4">
-            <nav aria-label="...">
-              <ul class="pagination justify-content-end mb-0">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1">
-                    <i class="fas fa-angle-left"></i>
-                    <span class="sr-only">Anterior</span>
-                  </a>
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">
-                    <i class="fas fa-angle-right"></i>
-                    <span class="sr-only">Siguiente</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+                  </div>
+                </td>
+              </tr> {% endfor %} </tbody>
+          </table>
+        </div>
+        <!-- Card footer -->
+        <div class="card-footer py-4">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">
+                  <i class="fas fa-angle-left"></i>
+                  <span class="sr-only">Anterior</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fas fa-angle-right"></i>
+                  <span class="sr-only">Siguiente</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
-
-{% endblock content %}
-
-<!-- Specific JS goes HERE --> 
-{% block javascripts %}
-
-{% endblock javascripts %}
+  </div> {% endblock content %} <!-- Specific JS goes HERE --> {% block javascripts %} {% endblock javascripts %}

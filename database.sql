@@ -1,4 +1,5 @@
 CREATE DATABASE cpteach_isiii;
+USE cpteach_isiii;
 CREATE TABLE users(
 	iduser INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username varchar(15),
@@ -10,26 +11,29 @@ CREATE TABLE user_info(
     nombre VARCHAR(10),
     apellidoP VARCHAR(10),
     apellidoM VARCHAR(10),
-    correo VARCHAR(10),
-    celular VARCHAR(10),
+    dni VARCHAR(20),
+    correo VARCHAR(50),
+    celular VARCHAR(20),
     ciudad VARCHAR(15),
     PRIMARY KEY(iduser_info,iduser)
 );
 CREATE TABLE estudiante(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id INTEGER NOT NULL PRIMARY KEY,
     carrera VARCHAR(30)
 );
 
 CREATE TABLE profesor(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    dni VARCHAR(20),
+	id INTEGER NOT NULL PRIMARY KEY,
     foto VARCHAR(255),
+    datePos varchar(40),
+    curso VARCHAR(40),
     curriculum VARCHAR(255),
-    departamento VARCHAR(35)
+    -- departamento VARCHAR(35),
+    estado VARCHAR(10)
 );
 
 CREATE TABLE administrador(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT
+	id INTEGER NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE curso(
