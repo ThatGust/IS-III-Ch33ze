@@ -103,7 +103,7 @@ class TaskModel:
         data = {'id': id, 'datePos': datePos, 'curso': curso, 'estado': estado}
         return data
 
-    # Funcion para obtener un usuario por su ID
+    # Funcion para obtener un profesor por su ID
 
     def get_postulant(self, id):
         params = {'id': id}
@@ -152,6 +152,76 @@ class TaskModel:
 
         data = {'result': 1}
         return data
+
+
+
+    def get_estudiante(self, id):
+        params = {'id': id}
+        rv = self.mysql_pool.execute("SELECT * from estudiante where id=%(id)s", params)
+        return bool(rv)
+
+    def get_profesor(self, id):
+        params = {'id': id}
+        rv = self.mysql_pool.execute("SELECT * from profesor where id=%(id)s", params)
+        return bool(rv)
+
+
+################### Administrador ################################
+
+    # Funcion para verificar administrador por su ID
+
+    def get_administrador(self, id):
+        params = {'id': id}
+        rv = self.mysql_pool.execute("SELECT * from administrador where id=%(id)s", params)
+        return bool(rv)
+
+    # Funcion para obtener datos un administrador por su ID
+
+    def get_administrador_datos(self, id):
+        params = {'id': id}
+        rv = self.mysql_pool.execute(
+            "SELECT * from administrador where id=%(id)s", params)
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id': result[0]}
+            data.append(content)
+            content = {}
+        return data
+
+    # Funcion para obtener todos los administradores
+    def get_administradors(self):
+        rv = self.mysql_pool.execute("SELECT * from administrador")
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_adm': result[0], 'rol': result[1]}
+            data.append(content)
+            content = {}
+        return data
+
+    # Funcion para agregar un administrador
+    def add_administrador(self, rol):
+        params = {
+            'rol': rol
+        }
+        query = """insert into administrador (rol)
+            values (%(rol)s)"""
+        cursor = self.mysql_pool.execute(query, params, commit=True)
+
+        data = {'id_adm': cursor.lastrowid, 'rol': rol}
+        return data
+
+    # Funcion para eliminar un administrador
+    def delete_administrador(self, id_adm):
+        params = {'id_adm': id_adm}
+        query = """delete from administrador where id_adm = %(id_adm)s"""
+        self.mysql_pool.execute(query, params, commit=True)
+
+        data = {'result': 1}
+        return data
+
+
 
 ################### Actividad ################################
     # Funcion para obtener una actividad por su ID
@@ -208,113 +278,6 @@ class TaskModel:
         data = {'result': 1}
         return data
 
-
-################### Administrador ################################
-
-    # Funcion para obtener un administrador por su ID
-
-    def get_administrador(self, id_adm):
-        params = {'id_adm': id_adm}
-        rv = self.mysql_pool.execute(
-            "SELECT * from administrador where id_adm=%(id_adm)s", params)
-        data = []
-        content = {}
-        for result in rv:
-            content = {'id_adm': result[0], 'rol': result[1]}
-            data.append(content)
-            content = {}
-        return data
-
-    # Funcion para obtener todos los administradores
-    def get_administradors(self):
-        rv = self.mysql_pool.execute("SELECT * from administrador")
-        data = []
-        content = {}
-        for result in rv:
-            content = {'id_adm': result[0], 'rol': result[1]}
-            data.append(content)
-            content = {}
-        return data
-
-    # Funcion para agregar un administrador
-    def add_administrador(self, rol):
-        params = {
-            'rol': rol
-        }
-        query = """insert into administrador (rol)
-            values (%(rol)s)"""
-        cursor = self.mysql_pool.execute(query, params, commit=True)
-
-        data = {'id_adm': cursor.lastrowid, 'rol': rol}
-        return data
-
-    # Funcion para eliminar un administrador
-    def delete_administrador(self, id_adm):
-        params = {'id_adm': id_adm}
-        query = """delete from administrador where id_adm = %(id_adm)s"""
-        self.mysql_pool.execute(query, params, commit=True)
-
-        data = {'result': 1}
-        return data
-
-
-################### Contribuidor ################################
-
-    # Funcion para obtener un contribuidor por su ID
-
-    def get_contribuidor(self, id_cont):
-        params = {'id_cont': id_cont}
-        rv = self.mysql_pool.execute(
-            "SELECT * from contribuidor where id_cont=%(id_cont)s", params)
-        data = []
-        content = {}
-        for result in rv:
-            content = {'id_cont': result[0], 'nombre': result[1], 'universidad': result[2], 'especialidad': result[3],
-                       'decsripcion': result[4], 'facebool': result[5], 'email': result[6], 'linkedin': result[7], 'rol': result[8]}
-            data.append(content)
-            content = {}
-        return data
-
-    # Funcion para obtener todos los contribuidores
-    def get_contribuidors(self):
-        rv = self.mysql_pool.execute("SELECT * from contribuidor")
-        data = []
-        content = {}
-        for result in rv:
-            content = {'id_cont': result[0], 'nombre': result[1], 'universidad': result[2], 'especialidad': result[3],
-                       'decsripcion': result[4], 'facebool': result[5], 'email': result[6], 'linkedin': result[7], 'rol': result[8]}
-            data.append(content)
-            content = {}
-        return data
-
-    # Funcion para agregar un contribuidor
-    def add_contribuidor(self, nombre, universidad, especialidad, decsripcion, facebool, email, linkedin, rol):
-        params = {
-            'nombre': nombre,
-            'universidad': universidad,
-            'especialidad': especialidad,
-            'decsripcion': decsripcion,
-            'facebool': facebool,
-            'email': email,
-            'linkedin': linkedin,
-            'rol': rol
-        }
-        query = """insert into contribuidor (nombre, universidad, especialidad, decsripcion, facebool, email, linkedin, rol)
-            values (%(nombre)s, %(universidad)s, %(especialidad)s, %(decsripcion)s, %(facebool)s, %(email)s, %(linkedin)s, %(rol)s)"""
-        cursor = self.mysql_pool.execute(query, params, commit=True)
-
-        data = {'id_cont': cursor.lastrowid, 'nombre': nombre, 'universidad': universidad, 'especialidad': especialidad,
-                'decsripcion': decsripcion, 'facebool': facebool, 'email': email, 'linkedin': linkedin, 'rol': rol}
-        return data
-
-    # Funcion para eliminar un contribuidor
-    def delete_contribuidor(self, id_cont):
-        params = {'id_cont': id_cont}
-        query = """delete from contribuidor where id_cont = %(id_cont)s"""
-        self.mysql_pool.execute(query, params, commit=True)
-
-        data = {'result': 1}
-        return data
 
 
 if __name__ == "__main__":
