@@ -3,19 +3,30 @@ import time
 import mysql.connector.pooling
 
 dbconfig = {
+<<<<<<< HEAD
     "host":"127.0.0.1",
     "port":"3306",
     "user":"root",
     "password":"123456", 
     "database":"cpteach_isiii",
+=======
+    "host": "127.0.0.1",
+    "port": "3306",
+    "user": "root",
+    "password": "123456",
+    # 123456
+    "database": "cpteach_isiii",
+>>>>>>> 4e4addbca2d73ab737b278a86cc73417238eba00
 }
+
 
 class MySQLPool(object):
     """
     create a pool when connect mysql, which will decrease the time spent in 
     request connection, create connection and close connection.
     """
-    def __init__(self):             
+
+    def __init__(self):
         self.pool = self.create_pool(pool_name='task_pool', pool_size=3)
 
     def create_pool(self, pool_name, pool_size):
@@ -95,10 +106,10 @@ class MySQLPool(object):
 if __name__ == "__main__":
     mysql_pool = MySQLPool()
     sql = "select * from actividad"
-        
+
     while True:
         t0 = time.time()
         for i in range(10):
             mysql_pool.execute(sql)
-            print (i)
-        print ("time cousumed:", time.time() - t0)
+            print(i)
+        print("time cousumed:", time.time() - t0)
