@@ -7,9 +7,6 @@
           <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
           </nav>
         </div>
-        <div class="col-lg-6 col-5 text-right">
-          <a href="/registerteacher" class="btn btn-sm btn-neutral">Nuevo</a>
-        </div>
       </div>
     </div>
   </div>
@@ -21,7 +18,7 @@
       <div class="card">
         <!-- Card header -->
         <div class="card-header border-0">
-          <h3 class="mb-0">Tabla de Postulantes</h3>
+          <h3 class="mb-0">Tabla de Docentes Postulantes</h3>
         </div>
         <!-- Light table -->
         <div class="table-responsive">
@@ -34,7 +31,8 @@
                 <th scope="col" class="sort" data-sort="postulation">Fecha de Postulacion</th>
                 <th scope="col" class="sort" data-sort="course">Curso</th>
                 <th scope="col" class="sort" data-sort="title">Titulo</th>
-                <th scope="col" class="sort" data-sort="state">Estado</th>
+                <th scope="col" class="sort" data-sort="state">Contratar</th>
+                <th scope="col" class="sort" data-sort="state">Rechazar</th>
               </tr>
             </thead>
             <tbody class="list"> {% for postulant in data %} <tr>
@@ -55,18 +53,11 @@
                 <td class="title-teacher">
                   <a href="#" class="btn btn-sm btn-neutral">Ver</a>
                 </td>
-                <td class="text-right">
-                  <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="#">Activo</a>
-                      <a class="dropdown-item" href="#">Pendiente</a>
-                      <a class="dropdown-item" href="#">Despedir</a>
-                    </div>
-                  </div>
+                <td class="title-teacher">
+                  <a href="{{ url_for("contratar_profesor", id=postulant.id) }}" class="btn btn-sm btn-neutral">Contratar</a>
+                </td>
+                <td class="title-teacher">
+                  <a href="{{ url_for("despedir_profesor", id=postulant.id) }}" class="btn btn-sm btn-neutral">Rechazar</a>
                 </td>
               </tr> {% endfor %} </tbody>
           </table>
