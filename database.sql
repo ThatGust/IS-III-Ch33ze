@@ -26,7 +26,7 @@ CREATE TABLE profesor(
 	id INTEGER NOT NULL PRIMARY KEY,
     foto VARCHAR(255),
     datePos varchar(40),
-    curso VARCHAR(40),
+    curso VARCHAR(60),
     curriculum VARCHAR(255),
     -- departamento VARCHAR(35),
     estado VARCHAR(10)
@@ -38,7 +38,9 @@ CREATE TABLE administrador(
 
 CREATE TABLE curso(
 	id_curso INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(40),
+    nombre VARCHAR(60),
+    descripcion TEXT,
+    silabo VARCHAR(50),
     n_alumnos INTEGER
 );
 
