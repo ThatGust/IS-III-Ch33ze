@@ -163,7 +163,7 @@ def register():
 @app.route('/postulacion')
 def postulacion():
     
-    return render_template('/home/postulant.html')
+    return render_template('/home/admin/postulant.html')
 
 
 @app.route('/registerteacher', methods=['GET', 'POST'])
@@ -209,17 +209,17 @@ def register_teacher():
 @app.route('/postulant')
 def postulant():
     data_ = model.get_postulants()
-    return render_template('/home/postulant.html', data=data_)
+    return render_template('/home/admin/postulant.html', data=data_)
 
 @app.route('/contracted')
 def contracted():
     data_ = model.get_postulants()
-    return render_template('/home/contratado.html', data=data_)
+    return render_template('/home/admin/contratado.html', data=data_)
 
 @app.route('/teachers')
 def teacher():
     data_ = model.get_postulants()
-    return render_template('/home/teachers.html', data=data_)
+    return render_template('/home/admin/teachers.html', data=data_)
 
 @app.route('/despedir/<int:id>')
 def despedir_profesor(id):
@@ -227,7 +227,7 @@ def despedir_profesor(id):
         model.estado_despedido(id)
         return redirect('/teachers')
     else:
-        return render_template('/home/contratado.html')
+        return render_template('/home/admin/contratado.html')
 
 @app.route('/contratar/<int:id>')
 def contratar_profesor(id):
@@ -235,7 +235,11 @@ def contratar_profesor(id):
         model.estado_contratado(id)
         return redirect('/teachers')
     else:
-        return render_template('/home/contratado.html')
+        return render_template('/home/admin/contratado.html')
+
+@app.route('/cursos')
+def cursos():
+    return render_template('/home/admin/cursos.html')
 
 @app.route('/logout')
 def logout():

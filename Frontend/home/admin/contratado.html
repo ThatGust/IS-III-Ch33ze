@@ -1,4 +1,5 @@
-{% extends 'layouts/base.html' %} {% block title %} Docentes {% endblock title %} {% block content %} <div
+{% extends 'layouts/base.html' %} {% block title %} Contratados {% endblock title %} {% block content %} 
+<div
   class="header bg-primary pb-6">
   <div class="container-fluid">
     <div class="header-body">
@@ -18,7 +19,7 @@
       <div class="card">
         <!-- Card header -->
         <div class="card-header border-0">
-          <h3 class="mb-0">Tabla de Docentes</h3>
+          <h3 class="mb-0">Tabla de Docentes Contratados</h3>
         </div>
         <!-- Light table -->
         <div class="table-responsive">
@@ -30,8 +31,6 @@
                 <th scope="col" class="sort" data-sort="phone">Mail</th>
                 <th scope="col" class="sort" data-sort="postulation">Fecha de Postulacion</th>
                 <th scope="col" class="sort" data-sort="course">Curso</th>
-                <th scope="col" class="sort" data-sort="title">Titulo</th>
-                <th scope="col" class="sort" data-sort="title">Estado</th>
                 <th scope="col" class="sort" data-sort="state">Despedir</th>
               </tr>
             </thead>
@@ -50,10 +49,6 @@
                 <td class="phone-teacher"> {{ postulant.mail }} </td>
                 <td class="postulation-teacher"> {{ postulant.datef }} </td>
                 <td class="course-teacher"> {{ postulant.course }} </td>
-                <td class="title-teacher">
-                  <a href="#" class="btn btn-sm btn-neutral">Ver</a>
-                </td>
-                <td class="course-teacher"> {{ postulant.estado }} </td>
                 <td class="title-teacher">
                   <a href="{{ url_for("despedir_profesor", id=postulant.id) }}" class="btn btn-sm btn-neutral">Despedir</a>
                 </td>
