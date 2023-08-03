@@ -70,6 +70,58 @@ class TaskModel:
         data = {'result': 1}
         return data
 
+################### Curso ################################
+
+    # Funcion para obtener un profesor por su ID
+
+    def get_course(self, id):
+        params = {'id': id}
+        rv = self.mysql_pool.execute(
+            "SELECT * from profesor where id=%(id)s", params)
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id': result[0], 'first_name': result[1], 'dni': result[2],
+                       'mail': result[3], 'datef': result[4], 'course': result[5]}
+            data.append(content)
+            content = {}
+        return data
+
+    def get_course_username(self, username):
+        params = {'username': username}
+        rv = self.mysql_pool.execute(
+            "SELECT * from users where username=%(username)s", params)
+        content = {}
+        for result in rv:
+            content = {'id': result[0],
+                       'username': result[1], 'password': result[2]}
+            return content
+
+        return None
+
+    # Funcion para obtener todos los cursos
+    def get_courses(self):
+        # rv = self.mysql_pool.execute("SELECT * from profesor")
+        rv = self.mysql_pool.execute(
+            'SELECT ui.iduser, CONCAT(ui.nombre," ",ui.apellidoP," ",ui.apellidoM) as Nombre,ui.dni,ui.correo,pr.datePos,pr.curso,pr.estado FROM user_info ui INNER JOIN profesor pr ON ui.iduser = pr.id;')
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id': result[0], 'nombre': result[1], 'dni': result[2],
+                       'mail': result[3], 'datef': result[4], 'course': result[5], 'estado': result[6]}
+            data.append(content)
+            content = {}
+        return data
+
+    # Funcion para eliminar un curso
+    def delete_course(self, id):
+        params = {'id': id}
+        query = """delete from profesor where id = %(id)s"""
+        self.mysql_pool.execute(query, params, commit=True)
+
+        data = {'result': 1}
+        return data
+
 ################### Postulante ################################
 
     def add_postulant_basic_inf(self, iduser, nombre, apellidoP, apellidoM, dni, correo, celular, ciudad):
