@@ -18,11 +18,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if 'teachers' in segment %} active {% endif %}" href="/profesores">
-              <i class="ni ni-pin-3 text-green"></i>
-              <span class="nav-link-text">Contratados</span>
+            <a class="nav-link {% if 'teachers' in segment %} active {% endif %}" href="/teachers">
+              <i class="ni ni-single-02 text-green"></i>
+              <span class="nav-link-text">Docentes</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {% if 'teachers' in segment %} active {% endif %}" href="/contracted">
+              <i class="ni ni-single-02 text-yellow"></i>
+              <span class="nav-link-text">Contratados</span>
+            </a>
           <li class="nav-item">
             <a class="nav-link {% if 'teachers' in segment %} active {% endif %}" href="/postulant">
               <i class="ni ni-single-02 text-yellow"></i>
@@ -30,9 +35,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if 'mails' in segment %} active {% endif %}" href="/correos">
-              <i class="ni ni-email-83 text-blue"></i>
-              <span class="nav-link-text">Mails</span>
+            <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/dashboard">
+              <i class="ni ni-single-02 text-primary"></i>
+              <span class="nav-link-text">Alumnos</span>
             </a>
           </li>
           <li class="nav-item">
@@ -40,13 +45,13 @@
               <i class="ni ni-single-02 text-primary"></i>
               <span class="nav-link-text">Validaciones</span>
             </a>
-          </li>
+          </li>       
           <li class="nav-item">
-            <a class="nav-link" href="/logout">
-              <i class="ni ni-user-run text-red"></i>
-              <span class="nav-link-text">Salir</span>
+            <a class="nav-link {% if 'mails' in segment %} active {% endif %}" href="/correos">
+              <i class="ni ni-email-83 text-blue"></i>
+              <span class="nav-link-text">Mails</span>
             </a>
-          </li>            
+          </li>   
         </ul>
         <!-- Divider -->
         <hr class="my-3">
@@ -56,15 +61,12 @@
         </h6>
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
-
           <li class="nav-item">
-            <a class="nav-link" 
-               target="_blank" 
-               href="https://appseed.us/admin-dashboards/django-dashboard-argon">
-              <i class="ni ni-archive-2"></i>
-              <span class="nav-link-text">Asistencias</span>
+            <a class="nav-link" href="/logout">
+              <i class="ni ni-user-run text-red"></i>
+              <span class="nav-link-text">Salir</span>
             </a>
-          </li>
+          </li>     
         </ul>
       </div>
     </div>

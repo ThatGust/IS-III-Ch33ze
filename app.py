@@ -109,11 +109,6 @@ def dashboard():
     return redirect('/login')
 
 
-@app.route('/profesores')
-def teacher():
-    return render_template('home/teachers.html')
-
-
 @app.route('/correos')
 def mail():
     return render_template('home/mails.html')
@@ -215,6 +210,32 @@ def register_teacher():
 def postulant():
     data_ = model.get_postulants()
     return render_template('/home/postulant.html', data=data_)
+
+@app.route('/contracted')
+def contracted():
+    data_ = model.get_postulants()
+    return render_template('/home/contratado.html', data=data_)
+
+@app.route('/teachers')
+def teacher():
+    data_ = model.get_postulants()
+    return render_template('/home/teachers.html', data=data_)
+
+@app.route('/despedir/<int:id>')
+def despedir_profesor(id):
+    if 'role' in session and session['role'] == 'admin':
+        model.estado_despedido(id)
+        return redirect('/teachers')
+    else:
+        return render_template('/home/contratado.html')
+
+@app.route('/contratar/<int:id>')
+def contratar_profesor(id):
+    if 'role' in session and session['role'] == 'admin':
+        model.estado_contratado(id)
+        return redirect('/teachers')
+    else:
+        return render_template('/home/contratado.html')
 
 @app.route('/logout')
 def logout():
