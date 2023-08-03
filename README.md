@@ -81,8 +81,8 @@ La iniciativa tiene repercusiones positivas para:
 ## Wireframes
 Para las diagramamaciones de las se utilizó Figma
 
-**Link APP:** -  [Versión App](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&node-id=0%3A1&t=IWCB6xXtNfGSOUUi-1)
-**Link WEB** - [Versión Web](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&t=GCXpUJp5qlITTBsL-1)
+
+### Link WEB - [Versión Web](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&t=GCXpUJp5qlITTBsL-1)
 
 ## Capturas
 
@@ -133,7 +133,9 @@ Para las diagramamaciones de las se utilizó Figma
 <p align="center">
   <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
 </p>
+La principal ventaja del patrón MVC es su capacidad para separar las preocupaciones y hacer que el desarrollo sea más fácil de mantener y escalar. Cada componente tiene una responsabilidad clara y puede modificarse o reemplazarse sin afectar a los otros. Esto mejora la flexibilidad y la reutilización del código.
 
+El patrón MVC ha sido ampliamente adoptado en el desarrollo de aplicaciones debido a sus beneficios en la organización y mantenimiento del código, lo que facilita la colaboración entre equipos y permite un desarrollo más rápido y eficiente.
 ## Requisitos funcionales
 ### Registro y proceso de selección:
 - [X] Los docentes deben poder registrarse en la plataforma proporcionando información personal y académica relevante.
