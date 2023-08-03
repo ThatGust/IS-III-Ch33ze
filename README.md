@@ -108,9 +108,6 @@ Para las diagramamaciones de las se utilizó Figma
   <img src="media/7.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/8.png" alt="Sublime's custom image"/>
-</p>
-<p align="center">
   <img src="media/9.png" alt="Sublime's custom image"/>
 </p>
 
