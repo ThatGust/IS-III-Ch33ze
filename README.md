@@ -81,8 +81,8 @@ La iniciativa tiene repercusiones positivas para:
 ## Wireframes
 Para las diagramamaciones de las se utilizó Figma
 
-**Link APP:** -  [Versión App](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&node-id=0%3A1&t=IWCB6xXtNfGSOUUi-1)
-**Link WEB** - [Versión Web](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&t=GCXpUJp5qlITTBsL-1)
+
+### Link WEB - [Versión Web](https://www.figma.com/file/5x7CzySBo0gkk9dtewyFwO/Untitled?type=design&t=GCXpUJp5qlITTBsL-1)
 
 ## Capturas
 
@@ -108,9 +108,6 @@ Para las diagramamaciones de las se utilizó Figma
   <img src="media/7.png" alt="Sublime's custom image"/>
 </p>
 <p align="center">
-  <img src="media/8.png" alt="Sublime's custom image"/>
-</p>
-<p align="center">
   <img src="media/9.png" alt="Sublime's custom image"/>
 </p>
 
@@ -119,21 +116,20 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Iniciar sesión.
  - [X] Cerrar sesión.
  - [X] Asignar curso a docente.
- - [X] Ver estadísticas de rendimiento de docente (asistencias, faltas, etc).
- - [X] Generar reportes.
+ - [X] Ver estadísticas de rendimiento de docente.
  - [X] Editar perfil de docente.
  - [X] Despedir docente.
  - [X] Editar horario.
  - [X] Ver cursos.
- - [X] Ver horarios.
- - [X] Ver salarios.
  - [X] Ver fecha de contratacion/fin de contratacion.
 
 ## MVC-Modelo Vista Controlador
 <p align="center">
   <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png?raw=true" alt="Sublime's custom image"/>
 </p>
+La principal ventaja del patrón MVC es su capacidad para separar las preocupaciones y hacer que el desarrollo sea más fácil de mantener y escalar. Cada componente tiene una responsabilidad clara y puede modificarse o reemplazarse sin afectar a los otros. Esto mejora la flexibilidad y la reutilización del código.
 
+El patrón MVC ha sido ampliamente adoptado en el desarrollo de aplicaciones debido a sus beneficios en la organización y mantenimiento del código, lo que facilita la colaboración entre equipos y permite un desarrollo más rápido y eficiente.
 ## Requisitos funcionales
 ### Registro y proceso de selección:
 - [X] Los docentes deben poder registrarse en la plataforma proporcionando información personal y académica relevante.
@@ -144,10 +140,7 @@ Para las diagramamaciones de las se utilizó Figma
 ### Personalización de criterios de evaluación:
 - [X] Los docentes deben tener la capacidad de personalizar los criterios y pesos de evaluación para cada curso que imparten.
 - [X] Deben poder definir los diferentes componentes de evaluación, como exámenes, trabajos, participación, etc.
- ### Registro y actualización de notas:
-- [X] Los docentes deben poder ingresar y actualizar las notas de los alumnos matriculados en sus cursos.
-- [X] El sistema debe permitir el registro de notas de forma fácil y precisa, y realizar cálculos automáticos de promedios y calificaciones finales.
- 
+
  
 ## Requisitos no funcionales
 =====
