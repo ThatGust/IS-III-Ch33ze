@@ -116,14 +116,11 @@ Para las diagramamaciones de las se utilizó Figma
  - [X] Iniciar sesión.
  - [X] Cerrar sesión.
  - [X] Asignar curso a docente.
- - [X] Ver estadísticas de rendimiento de docente (asistencias, faltas, etc).
- - [X] Generar reportes.
+ - [X] Ver estadísticas de rendimiento de docente.
  - [X] Editar perfil de docente.
  - [X] Despedir docente.
  - [X] Editar horario.
  - [X] Ver cursos.
- - [X] Ver horarios.
- - [X] Ver salarios.
  - [X] Ver fecha de contratacion/fin de contratacion.
 
 ## MVC-Modelo Vista Controlador
@@ -143,10 +140,7 @@ El patrón MVC ha sido ampliamente adoptado en el desarrollo de aplicaciones deb
 ### Personalización de criterios de evaluación:
 - [X] Los docentes deben tener la capacidad de personalizar los criterios y pesos de evaluación para cada curso que imparten.
 - [X] Deben poder definir los diferentes componentes de evaluación, como exámenes, trabajos, participación, etc.
- ### Registro y actualización de notas:
-- [X] Los docentes deben poder ingresar y actualizar las notas de los alumnos matriculados en sus cursos.
-- [X] El sistema debe permitir el registro de notas de forma fácil y precisa, y realizar cálculos automáticos de promedios y calificaciones finales.
- 
+
  
 ## Requisitos no funcionales
 =====
