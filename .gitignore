@@ -29,3 +29,5 @@ apps/static/assets/node_modules
 apps/static/assets/yarn.lock
 apps/static/assets/.temp
 
+flask_session/2029240f6d1128be89ddc32729463129
+flask_session/e39b5211ccebfaebf39d26e1e31bd75a
