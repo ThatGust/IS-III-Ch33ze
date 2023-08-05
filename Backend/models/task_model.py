@@ -196,7 +196,19 @@ class TaskModel:
             content = {}
         return data
 
+    def get_contracted(self):
+        rv = self.mysql_pool.execute(
+            'SELECT ui.iduser, CONCAT(ui.nombre," ",ui.apellidoP," ",ui.apellidoM) as Nombre,ui.dni,ui.correo,pr.datePos,pr.curso,pr.estado FROM user_info ui INNER JOIN profesor pr ON ui.iduser = pr.id AND pr.estado = "Contratado";')
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id': result[0], 'nombre': result[1], 'dni': result[2],
+                       'mail': result[3], 'datef': result[4], 'course': result[5], 'estado': result[6]}
+            data.append(content)
+            content = {}
+        return data
     # Funcion para eliminar un usuario
+
     def delete_postulant(self, id):
         params = {'id': id}
         query = """delete from profesor where id = %(id)s"""
@@ -205,16 +217,16 @@ class TaskModel:
         data = {'result': 1}
         return data
 
-
-
     def get_estudiante(self, id):
         params = {'id': id}
-        rv = self.mysql_pool.execute("SELECT * from estudiante where id=%(id)s", params)
+        rv = self.mysql_pool.execute(
+            "SELECT * from estudiante where id=%(id)s", params)
         return bool(rv)
 
     def get_profesor(self, id):
         params = {'id': id}
-        rv = self.mysql_pool.execute("SELECT * from profesor where id=%(id)s", params)
+        rv = self.mysql_pool.execute(
+            "SELECT * from profesor where id=%(id)s", params)
         return bool(rv)
 
 
@@ -222,9 +234,11 @@ class TaskModel:
 
     # Funcion para verificar administrador por su ID
 
+
     def get_administrador(self, id):
         params = {'id': id}
-        rv = self.mysql_pool.execute("SELECT * from administrador where id=%(id)s", params)
+        rv = self.mysql_pool.execute(
+            "SELECT * from administrador where id=%(id)s", params)
         return bool(rv)
 
     # Funcion para obtener datos un administrador por su ID
@@ -284,6 +298,7 @@ class TaskModel:
         self.mysql_pool.execute(query, params, commit=True)
 
 ###################################################
+
 
 if __name__ == "__main__":
     tm = TaskModel()

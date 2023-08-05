@@ -16,7 +16,7 @@ model = TaskModel()
 app = Flask(__name__, template_folder='Frontend',
             static_folder='Frontend/static')
 
-app.register_blueprint(task_blueprint) 
+app.register_blueprint(task_blueprint)
 
 cors = CORS(app)
 
@@ -28,6 +28,7 @@ Session(app)
 #################### ERRORES ########################
 
 # Manejador de error para el código de respuesta 403
+
 
 @app.errorhandler(403)
 def forbidden_error(error):
@@ -56,6 +57,7 @@ def authenticate_user(username, password):
     if user and user['password'] == password:
         return user
     return None
+
 
 def get_user_role(iduser):
     # Verificar si el ID se encuentra en la tabla profesor
@@ -91,7 +93,7 @@ def dashboard():
     if 'username' in session and 'role' in session and 'iduser' in session:
         username = session['username']
         role = session['role']
-        
+
         if role == 'admin':
             # Mostrar página de administrador
             return render_template('home/admin/Adashboard.html', username=username)
@@ -104,7 +106,7 @@ def dashboard():
         elif role == 'usuario':
             # Mostrar página de usuario
             return render_template('home/index.html', username=username)
-    
+
     # Redirigir a la página de inicio de sesión si no hay sesión válida
     return redirect('/login')
 
@@ -133,7 +135,7 @@ def login():
             session['role'] = get_user_role(user['iduser'])
             session['iduser'] = user['iduser']
 
-            return redirect('/')
+            return redirect('/dashboard')
         else:
             flash('Error, intentelo de nuevo', 'error')
 
@@ -160,9 +162,10 @@ def register():
 
     return render_template('accounts/register.html')
 
+
 @app.route('/postulacion')
 def postulacion():
-    
+
     return render_template('/home/admin/postulant.html')
 
 
@@ -206,20 +209,24 @@ def register_teacher():
     else:
         return redirect('/login')
 
+
 @app.route('/postulant')
 def postulant():
     data_ = model.get_postulants()
     return render_template('/home/admin/postulant.html', data=data_)
 
+
 @app.route('/contracted')
 def contracted():
-    data_ = model.get_postulants()
+    data_ = model.get_contracted()
     return render_template('/home/admin/contratado.html', data=data_)
+
 
 @app.route('/teachers')
 def teacher():
     data_ = model.get_postulants()
     return render_template('/home/admin/teachers.html', data=data_)
+
 
 @app.route('/despedir/<int:id>')
 def despedir_profesor(id):
@@ -229,6 +236,7 @@ def despedir_profesor(id):
     else:
         return render_template('/home/admin/contratado.html')
 
+
 @app.route('/contratar/<int:id>')
 def contratar_profesor(id):
     if 'role' in session and session['role'] == 'admin':
@@ -237,9 +245,11 @@ def contratar_profesor(id):
     else:
         return render_template('/home/admin/contratado.html')
 
+
 @app.route('/cursos')
 def cursos():
     return render_template('/home/admin/cursos.html')
+
 
 @app.route('/logout')
 def logout():
@@ -250,5 +260,6 @@ def logout():
     # Redirigir al usuario a la página de inicio
     return render_template('home/index.html')
 
+
 if __name__ == "__main__":
-      app.run(debug=True)
+    app.run(debug=True)

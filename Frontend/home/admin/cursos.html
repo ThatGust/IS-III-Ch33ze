@@ -1,9 +1,7 @@
-{% extends 'layouts/base-teacher.html' %} {% block title %} Cursos {% endblock title %} {% block content %} <div
+{% extends 'layouts/base.html' %} {% block title %} Cursos {% endblock title %} {% block content %} <div
   class="header bg-primary pb-6">
   <div class="container-fluid">
-    <div class="header-body">
-      Hola
-      <div class="row align-items-center py-4">
+    <div class="header-body"> Hola <div class="row align-items-center py-4">
         <div class="col-lg-6 col-7">
           <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
           </nav>
@@ -52,7 +50,8 @@
                 <td class="course-teacher"> {{ postulant.state-course }} </td>
                 <td class="course-teacher"> {{ postulant.estado }} </td>
                 <td class="title-teacher">
-                  <a href="{{ url_for("despedir_profesor", id=postulant.id) }}" class="btn btn-sm btn-neutral">Eliminar</a>
+                  <a href="{{ url_for(" despedir_profesor", id=postulant.id) }}"
+                    class="btn btn-sm btn-neutral">Eliminar</a>
                 </td>
               </tr> {% endfor %} </tbody>
           </table>
