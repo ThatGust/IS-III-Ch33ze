@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/assets/css/styles.css">
+        <link rel="stylesheet" href="/static/assets/css/argon.css?v=1.2.0" type="text/css">
+        <title>CPTeach</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="header bg-gradient-primary py-7 py-lg-8">
+                <div class="headerr">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="../static/assets/img/brand/cpteach.png" alt="">
+                        </a>
+                    </div>
+                    <div class="buttons">
+                        <button class="butonn" onclick="window.location.href = '/dashboard'">DASHBOARD</button>
+                        <button class="butonn" onclick="window.location.href = '/registerteacher'">POSTULA AQUI</button>
+                        <button class="butonn" onclick="window.location.href = '/login'">INICIAR SESION</button>
+                        <button class="butonn" onclick="window.location.href = '/register'">REGISTRARSE</button>
+                        <button class="butonn" onclick="window.location.href = '/logout'">CERRAR SESION</button>
+                    </div>
+                </div>
+                <div class="separator separator-bottom separator-skew zindex-100">
+                    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+                    </svg>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Bienvenido a CPTeach</h1>
+            </div>
+            <div class="quote-wrapper">
+                <blockquote class="text" cite="http://www.inspireux.com/category/quotes/jesse-james-garrett/">
+                    <p>La educación es el arma mas poderosa que puedes usar para cambiar el mundo.</p>
+                    <footer>– Nelson Mandela</footer>
+                </blockquote>
+            </div>
+        </header>
+    </body> {% include "includes/footer-fullscreen.html" %}
+
+</html> {% block javascripts %}{% endblock javascripts %}
