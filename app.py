@@ -239,7 +239,40 @@ def contratar_profesor(id):
 
 @app.route('/cursos')
 def cursos():
-    return render_template('/home/admin/cursos.html')
+    data_ = model.get_courses()
+    return render_template('/home/admin/cursos.html', data=data_)
+    
+@app.route('/cursosregister')
+def cursosregister():
+    if 'username' in session and 'role' in session and 'iduser' in session:
+        username_ = session['username']
+        iduser_ = session['iduser']
+
+        if request.method == 'POST':
+            coursename = request.form['first_name']
+            description = request.form['apellido_paterno']
+            year = request.form['apellido_materno']
+            prerequisites = request.form['dni']
+            numberstudents = request.form['mail']
+            data = {
+                'iduser': iduser_,
+                'coursename': coursename,
+                'description': description,
+                'year': year,
+                'prerequisites': prerequisites,
+                'numberstudents': numberstudents,
+                'estado': "Pendiente"
+            }
+
+            headers = {'Content-Type': 'application/json'}
+            response = requests.post(
+                host + '/cursos/add_course', json=data, headers=headers)
+
+            return redirect('/cursos')
+
+        return render_template('/home/admin/course-register.html', username=username_)
+    else:
+        return redirect('/login')
 
 @app.route('/logout')
 def logout():

@@ -72,32 +72,33 @@ class TaskModel:
 
 ################### Curso ################################
 
-    # Funcion para obtener un profesor por su ID
+    def add_course(self, id_curso, coursename, description, year, prerequisites, numberstudents):
+        params = {
+            'id_curso': id_curso,
+            'coursename': coursename,
+            'description': description,
+            'year': year,
+            'prerequisites': prerequisites,
+            'numberstudents': numberstudents,
+        }
+        query = """insert into profesor(id, datePos,curso,estado) values (%(id_curso)s, %(coursename)s, %(description)s, %(year)s, %(prerequisites)s, %(numberstudents)s)"""
+        cursor = self.mysql_pool.execute(query, params, commit=True)
+        data = {'id_curso': id_curso, 'coursename': coursename, 'description': description, 'year': year, 'prerequisites': prerequisites, 'numberstudents': numberstudents}
+        return data
+
 
     def get_course(self, id):
         params = {'id': id}
         rv = self.mysql_pool.execute(
-            "SELECT * from profesor where id=%(id)s", params)
+            "SELECT * from curso where id=%(id)s", params)
         data = []
         content = {}
         for result in rv:
-            content = {'id': result[0], 'first_name': result[1], 'dni': result[2],
-                       'mail': result[3], 'datef': result[4], 'course': result[5]}
+            content = {'id_curso': result[0], 'nombre': result[1], 'descripcion': result[2],
+                       'year': result[3], 'prerequisites': result[4], 'n_alumnos': result[6]}
             data.append(content)
             content = {}
         return data
-
-    def get_course_username(self, username):
-        params = {'username': username}
-        rv = self.mysql_pool.execute(
-            "SELECT * from users where username=%(username)s", params)
-        content = {}
-        for result in rv:
-            content = {'id': result[0],
-                       'username': result[1], 'password': result[2]}
-            return content
-
-        return None
 
     # Funcion para obtener todos los cursos
     def get_courses(self):
@@ -107,8 +108,9 @@ class TaskModel:
         data = []
         content = {}
         for result in rv:
-            content = {'id': result[0], 'nombre': result[1], 'dni': result[2],
-                       'mail': result[3], 'datef': result[4], 'course': result[5], 'estado': result[6]}
+            content = {'id_curso': result[0], 'nombre': result[1], 'descripcion': result[2],
+                       'year': result[3], 'prerequisites': result[4], 'silabo': result[6],
+                       'n_alumnos': result[7]}
             data.append(content)
             content = {}
         return data
@@ -116,7 +118,7 @@ class TaskModel:
     # Funcion para eliminar un curso
     def delete_course(self, id):
         params = {'id': id}
-        query = """delete from profesor where id = %(id)s"""
+        query = """delete from course where id_curso = %(id)s"""
         self.mysql_pool.execute(query, params, commit=True)
 
         data = {'result': 1}
