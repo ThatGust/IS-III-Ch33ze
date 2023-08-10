@@ -239,7 +239,7 @@ def contratar_profesor(id):
 
 @app.route('/cursos')
 def cursos():
-    data_ = model.get_courses()
+    data_ = model.get_coursess()
     return render_template('/home/admin/cursos.html', data=data_)
     
 @app.route('/cursosregister')

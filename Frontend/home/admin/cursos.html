@@ -1,4 +1,4 @@
-{% extends 'layouts/base-teacher.html' %} {% block title %} Cursos {% endblock title %} {% block content %} <div
+{% extends 'layouts/base.html' %} {% block title %} Cursos {% endblock title %} {% block content %} <div
   class="header bg-primary pb-6">
   <div class="container-fluid">
     <div class="header-body">
@@ -26,13 +26,11 @@
           <table class="table align-items-center table-flush">
             <thead class="thead-light">
               <tr> 
-                <th scope="col" class="sort" data-sort="nombre">Nombre</th>
-                <th scope="col" class="sort" data-sort="descripcion	">Descripcion</th>
-                <th scope="col" class="sort" data-sort="year">Año</th>
-                <th scope="col" class="sort" data-sort="prerequisites">Pre-requisitos</th>
+                <th scope="col" class="sort" data-sort="nombre">Logo</th>
+                <th scope="col" class="sort" data-sort="year">Nombre</th>
+                <th scope="col" class="sort" data-sort="prerequisites">Descripcion</th>
                 <th scope="col" class="sort" data-sort="silabo">Silabo</th>
                 <th scope="col" class="sort" data-sort="n_alumnos">Numero de Alumnos</th>
-                <th scope="col" class="sort" data-sort="state-course">Estado</th>
               </tr>
             </thead>
             <tbody class="list"> {% for course in data %} <tr>
@@ -41,19 +39,12 @@
                     <a href="#" class="avatar rounded-circle mr-3">
                       <img alt="Image placeholder" src="/static/assets/img/theme/bootstrap.jpg">
                     </a>
-                    <div class="media-body">
-                      <span class="name mb-0 text-sm">{{ postulant.nombre }}</span>
-                    </div>
                   </div>
                 </th>
-                <td class="dni-teacher"> {{ course.year }} </td>
-                <td class="phone-teacher"> {{ postulant.requisites }} </td>
-                <td class="postulation-teacher"> {{ postulant.datef }} </td>
-                <td class="course-teacher"> {{ postulant.state-course }} </td>
-                <td class="course-teacher"> {{ postulant.estado }} </td>
-                <td class="title-teacher">
-                  <a href="{{ url_for("despedir_profesor", id=postulant.id) }}" class="btn btn-sm btn-neutral">Eliminar</a>
-                </td>
+                <td class="phone-teacher"> {{ course.nombre }}</td>
+                <td class="postulation-teacher"> {{ course.descripcion }} </td>
+                <td class="course-teacher"> {{ course.silabo }} </td>
+                <td class="course-teacher"> {{ course.n_alumnos }} </td>
               </tr> {% endfor %} </tbody>
           </table>
         </div>

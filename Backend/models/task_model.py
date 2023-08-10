@@ -115,6 +115,24 @@ class TaskModel:
             content = {}
         return data
 
+
+
+
+
+    def get_coursess(self):
+        rv = self.mysql_pool.execute("SELECT * from curso")
+        data = []
+        content = {}
+        for result in rv:
+            content = {'id_curso': result[0], 'nombre': result[1], 'descripcion': result[2], 'silabo': result[3], 'n_alumnos': result[4]}
+            data.append(content)
+            content = {}
+        return data
+
+
+
+
+
     # Funcion para eliminar un curso
     def delete_course(self, id):
         params = {'id': id}

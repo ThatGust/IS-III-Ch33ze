@@ -3,12 +3,11 @@ import time
 import mysql.connector.pooling
 
 dbconfig = {
-    "host": "127.0.0.1",
-    "port": "3306",
+    "host": "containers-us-west-171.railway.app",
+    "port": "5493",
     "user": "root",
-    "password": "123456",
-    # 123456
-    "database": "cpteach_isiii",
+    "password": "zNhdgDQCl4xFM21OEtJf",
+    "database": "railway",
 }
 
 
